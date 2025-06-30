@@ -1,0 +1,32 @@
+{
+    "name": "app",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/opt/apps/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "vscjava.vscode-java-debug",
+                "redhat.java",
+                "vmware.vscode-spring-boot",
+                "vscjava.vscode-maven",
+                "humao.rest-client",
+                "chris-rimmer.liquibase-snippets",
+                "lcjuves.vscode-gjf"
+            ],
+            "settings": {
+                "vscode-gjf.execJarPath": "/usr/local/lib/google-java-format.jar",
+                "[java]": {
+                    "editor.defaultFormatter": "lcjuves.vscode-gjf",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                "java.compile.nullAnalysis.mode": "automatic",
+                "extensions.ignoreRecommendations": true
+            }
+        }
+    }
+}

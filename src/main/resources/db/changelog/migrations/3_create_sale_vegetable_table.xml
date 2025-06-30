@@ -1,0 +1,26 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   <changeSet id="3_create_sale_vegetable_table" author="henrotaym">
+        <createTable tableName="sale_vegetable">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="pk_sale_vegetable"/>
+            </column>
+            <column name="quantity" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sale_id" type="BIGINT">
+                <constraints nullable="false" references="sales(id)" foreignKeyName="fk_sales" />
+            </column>
+            <column name="vegetable_id" type="BIGINT">
+                <constraints nullable="false" references="vegetables(id)" foreignKeyName="fk_vegetables"/>
+            </column>
+        </createTable>
+   </changeSet>
+</databaseChangeLog>

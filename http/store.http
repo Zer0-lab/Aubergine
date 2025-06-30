@@ -1,0 +1,11 @@
+POST http://app:8080/api/sales
+Content-Type: application/json
+
+{
+    "vegetables": [
+        {
+            "quantity": 4,
+            "vegetable": { "id": 1 }
+        }
+    ]
+}

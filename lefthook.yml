@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: false
+  commands:
+    format:
+      glob: '*.{java}'
+      run: ./devops/format.sh {staged_files} && git add {staged_files}
+    test:
+      glob: '*.{java}'
+      run: ./devops/test.sh

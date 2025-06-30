@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./devops/$1.sh
